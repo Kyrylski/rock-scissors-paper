@@ -1,10 +1,10 @@
-
-
+let computerChoice
+let playerChoice
 
 // User choosing rock scissors or paper
 
 
-let playerChoice = prompt("What's your move");
+ playerChoice = prompt("What's your move");
 
 
 // computer choosing rock scissors or paper
@@ -20,21 +20,52 @@ function choiceGenerator() {
           }else (randomChoice === 3); {
             return  "Paper";
           }
-  
+          
         }
 
-        let computerChoice = choiceGenerator()
+        computerChoice = choiceGenerator()
+
+
+// converting choises to lowercase
+
+        playerChoice = playerChoice.toLowerCase()
+        computerChoice = computerChoice.toLowerCase()
+
+
+// comparing player and computer position to find a winner 
+
+
+function playRound(){
+    function lowCase() { 
+        
+    }
+
+    if (playerChoice === computerChoice) {
+               return  "it's a draw"
+         } else if ( 
+                    (playerChoice == "rock" && computerChoice == "scissors") ||
+                    (playerChoice == "scissors" && computerChoice == "paper") ||
+                    (playerChoice == "paper" && computerChoice == "rock")) {
+                        return "YOU WIN! Hooray"
+                    }else {
+                        return "YOU LOSE! OH Nooooo"
+                    }
+                            
+                    
+         
+}
+
+
+let roundResult = playRound();
+alert(roundResult)
 
 
 
+ 
 
-
-
-
-
-
-
-
+ 
+  
+  
 
 // playerChoise = prompt("Wybierz coś")
 
