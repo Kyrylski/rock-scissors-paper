@@ -66,17 +66,19 @@ function playRound(){
 // play 5 round to find a winner
 
 
-    
+  function game() {
+    while (playerScore < 5 && computerScore < 5){
+      
+      playRound();
+    } 
+    if(playerScore === 5) {
+      alert("YOU WIN THIS TIME")
+    }else {
+      alert("COMPUTERS ARE TAKING OVER THE WORLD. RUN!!!")
+    }
+  }
 
-game()
 
+// LET'S PLAY !
 
-
-
-
-// function game()  {
-//     while (playerScore === 5 && computerScore === 5){
-//         
-//     }
-    
-// }
+game();
